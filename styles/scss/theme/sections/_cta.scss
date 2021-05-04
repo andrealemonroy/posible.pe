@@ -1,0 +1,53 @@
+.cta {
+  .form-input {
+    border-color: transparent;
+    border-radius: 2px;
+  }
+  width: 100vw;
+}
+
+.cta-slogan {
+  background-color: get-color(primary, 3);
+  // background-image: url(../../../images/cta.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  // background-position: right bottom;
+  width: 100vw !important;
+  height: 30vh;
+  z-index: 1;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.cta-slogan h2{
+    color: color(heading-inverse)
+}
+
+.cta-action {
+  display: flex;
+  justify-content: space-around;
+  color: color(heading)
+}
+
+.flex{
+    display: flex;
+    justify-content: space-around
+}
+.icon{
+    margin: 0;
+    padding: 0;
+}
+
+@include media(">medium") {
+  .cta {
+    .form-input {
+      min-width: 280px;
+    }
+  }
+
+//   .cta-inner {
+//     padding-left: 48px;
+//     padding-right: 48px;
+//   }
+}

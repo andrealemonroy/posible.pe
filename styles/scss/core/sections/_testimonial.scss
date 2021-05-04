@@ -1,0 +1,188 @@
+.testimonial {
+  // background-image: url(../../../images/whyUsSection.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  // height: 100vh;
+  display: flex;
+  align-items: center;
+  color: color(heading);
+  .section-inner {
+    padding-top: $testimonial--padding-t__mobile;
+    padding-bottom: $testimonial--padding-b__mobile;
+  }
+
+  .section-header {
+    padding-bottom: $testimonial-header--padding__mobile;
+  }
+
+  .tiles-wrap {
+    @if ($testimonial-items--padding__mobile != null) {
+      margin-right: -($testimonial-items--padding__mobile / 2);
+      margin-left: -($testimonial-items--padding__mobile / 2);
+      margin-top: -($testimonial-items--padding__mobile / 2);
+
+      &:last-of-type {
+        margin-bottom: -($testimonial-items--padding__mobile / 2);
+      }
+
+      &:not(:last-of-type) {
+        margin-bottom: ($testimonial-items--padding__mobile / 2);
+      }
+    }
+
+    &.push-left {
+      &::after {
+        flex-basis: $testimonial-item--width;
+        max-width: $testimonial-item--width;
+        @if ($testimonial-items--padding__mobile != null) {
+          padding-left: $testimonial-items--padding__mobile / 2;
+          padding-right: $testimonial-items--padding__mobile / 2;
+        }
+      }
+    }
+  }
+
+  .tiles-item {
+    flex-basis: $testimonial-item--width;
+    max-width: $testimonial-item--width;
+    @if ($testimonial-items--padding__mobile != null) {
+      // padding: $testimonial-items--padding__mobile / 2;
+    }
+  }
+
+  .tiles-item-inner {
+    // padding-top: $testimonial-item--inner-padding-v;
+    // padding-bottom: $testimonial-item--inner-padding-v;
+    // padding-left: $testimonial-item--inner-padding-h;
+    // padding-right: $testimonial-item--inner-padding-h;
+  }
+}
+
+.testimonial-item-content {
+  flex-grow: 1;
+}
+.testimonial-item-content{
+  z-index: 0
+}
+
+.testimonial-item-content img:hover{
+  background: black;
+  z-index: 99
+}
+
+.testimonial-item-source {
+  display: inline-flex; // to allow centering when using .content-center on a parent tag
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@include media(">medium") {
+  .testimonial {
+    .section-inner {
+      padding-top: $testimonial--padding-t__desktop;
+      padding-bottom: $testimonial--padding-b__desktop;
+    }
+
+    .section-header {
+      padding-bottom: $testimonial-header--padding__desktop;
+    }
+
+    @if ($testimonial-items--padding__desktop != null) {
+      .tiles-wrap {
+        margin-right: -($testimonial-items--padding__desktop / 2);
+        margin-left: -($testimonial-items--padding__desktop / 2);
+        margin-top: -($testimonial-items--padding__desktop / 2);
+
+        &:last-of-type {
+          margin-bottom: -($testimonial-items--padding__desktop / 2);
+        }
+
+        &:not(:last-of-type) {
+          margin-bottom: ($testimonial-items--padding__desktop / 2);
+        }
+
+        &.push-left {
+          &::after {
+            padding-left: $testimonial-items--padding__desktop / 2;
+            padding-right: $testimonial-items--padding__desktop / 2;
+          }
+        }
+      }
+
+      .tiles-item {
+        // padding: $testimonial-items--padding__desktop / 2;
+      }
+    }
+  }
+}
+.achievments {
+  // background-image: url(../../../images/achievmentsSection.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 900px;
+  color: color(heading-inverse);
+}
+.howWeDo {
+  color: color(heading);
+  max-height: 900px;
+  width: 100vw !important;
+  .container-how {
+    display: flex;
+    .image-how {
+      // background-image: url(../../../images/why-img.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+	  width: 50vw;
+	  h2{
+		  margin: 50px;
+	  }
+    }
+    .stages {
+      // background-image: url(../../../images/stage-img.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+	  width: 50vw;
+	  display: flex;
+	  padding: 0 10%;
+	  align-items: center;
+    }
+  }
+}
+
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.img-hover-container:hover .image {
+  opacity: 0.3;
+}
+
+.img-hover-container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}

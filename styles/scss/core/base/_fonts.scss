@@ -1,0 +1,14 @@
+// @if ( $font--provider == 'Google Fonts' ) {
+//     @import url('https://fonts.googleapis.com/css?family=#{$font--import}&display=swap');
+// }
+
+@font-face {
+    font-family: 'Anybody';
+    src: url('/public/fonts/Anybody-SemiBold.woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+*{
+    font-family:'Anybody';
+}
